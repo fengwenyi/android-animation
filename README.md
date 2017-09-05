@@ -1,8 +1,8 @@
-# Android¶¯»­¼òµ¥×Ü½á
-1¡¢Android¶¯»­°üÀ¨ÊôÐÔ¶¯»­ºÍ´«Í³¶¯»­£¨Ö¡¶¯»­ºÍ²¹¼ä¶¯»­£©
-2¡¢Android¶¯»­ÓÐÁ½ÖÖÊµÏÖ·½Ê½£ºXMLÉèÖÃºÍJava£¨Kotlin£©´úÂëÊµÏÖ
-3¡¢³£¼û¶¯»­ÊµÏÖÊ¾Àý
-### ¡´Ò»¡µËõ  ·Å
+# AndroidåŠ¨ç”»ç®€å•æ€»ç»“
+1ã€AndroidåŠ¨ç”»åŒ…æ‹¬å±žæ€§åŠ¨ç”»å’Œä¼ ç»ŸåŠ¨ç”»ï¼ˆå¸§åŠ¨ç”»å’Œè¡¥é—´åŠ¨ç”»ï¼‰
+2ã€AndroidåŠ¨ç”»æœ‰ä¸¤ç§å®žçŽ°æ–¹å¼ï¼šXMLè®¾ç½®å’ŒJavaï¼ˆKotlinï¼‰ä»£ç å®žçŽ°
+3ã€å¸¸è§åŠ¨ç”»å®žçŽ°ç¤ºä¾‹
+### ã€ˆä¸€ã€‰ç¼©  æ”¾
 ```
 <scale
     android:duration="2000"
@@ -17,7 +17,7 @@
     />
 ```
 
-### ¡´Ò»¡µÍ¸Ã÷¶È
+### ã€ˆä¸€ã€‰é€æ˜Žåº¦
 ```
 <alpha
     android:duration="5000"
@@ -26,7 +26,7 @@
     />
 ```
 
-### ¡´Ò»¡µÐý  ×ª
+### ã€ˆä¸€ã€‰æ—‹  è½¬
 ```
 <rotate
     android:duration="500"
@@ -38,7 +38,7 @@
     />
 ```
 
-### ¡´Ò»¡µÎ»  ÒÆ
+### ã€ˆä¸€ã€‰ä½  ç§»
 ```
 <translate
     android:duration="10000"
@@ -49,38 +49,38 @@
     />
 ```
 
-Kotlin´úÂë: ½«ÒÔÉÏXMLÎÄ¼þÓ¦ÓÃµ½imageÉÏ
+Kotlinä»£ç : å°†ä»¥ä¸ŠXMLæ–‡ä»¶åº”ç”¨åˆ°imageä¸Š
 ```
 val loadAnimation : Animation
 
 when(view?.id) {
-    /** Ëõ·Å */
+    /** ç¼©æ”¾ */
     R.id.btnScales -> {
         loadAnimation = AnimationUtils.loadAnimation(mContext, R.anim.scales)
         imgView.startAnimation(loadAnimation)
     }
-    /** Í¸Ã÷¶È */
+    /** é€æ˜Žåº¦ */
     R.id.btnAlpha -> {
         loadAnimation = AnimationUtils.loadAnimation(mContext, R.anim.alpha)
         imgView.startAnimation(loadAnimation)
     }
-    /** Ðý×ª */
+    /** æ—‹è½¬ */
     R.id.btnRotate -> {
         loadAnimation = AnimationUtils.loadAnimation(mContext, R.anim.rotate)
         imgView.startAnimation(loadAnimation)
     }
-    /** Î»ÒÆ */
+    /** ä½ç§» */
     R.id.btnTranslate -> {
         loadAnimation = AnimationUtils.loadAnimation(mContext, R.anim.translate)
         imgView.startAnimation(loadAnimation)
     }
-    /** ÇÐ»» */
+    /** åˆ‡æ¢ */
     R.id.btnChange -> {
         val intent = Intent(mContext, SecondActivity::class.java)
         mContext.startActivity(intent)
         overridePendingTransition(R.anim.alpha, R.anim.rotate)
     }
-    /** ÉÁË¸ */
+    /** é—ªçƒ */
     R.id.btnFlash -> {
         val alphaAnimation = AlphaAnimation(0f, 0.5f)
         alphaAnimation.duration = 100
@@ -91,7 +91,7 @@ when(view?.id) {
 }
 ```
 
-### Ö¡¶¯»­
+### å¸§åŠ¨ç”»
 ```
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -123,7 +123,7 @@ when(view?.id) {
 </animation-list>
 ```
 
-Kotlin´úÂë
+Kotlinä»£ç 
 
 ```
 imgAnimation.setImageResource(R.drawable.loading)
@@ -131,4 +131,4 @@ val animationDrawable : AnimationDrawable = imgAnimation.drawable as AnimationDr
 animationDrawable.start()
 ```
 
-ÒÔÉÏ¾ÍÊÇAndroid¶¯»­ÊµÏÖµÄ´úÂë£¨Kotlin£¬²»Éæ¼°Java£©ÊµÏÖ£¬Èç¹ûÄãÓÐÈÎºÎÎÊÌâ£¬¿ÉÒÔÍ¨¹ýE-mailµÄÐÎÊ½¸æËßÎÒ£¬ÎÒÒ»¶¨¾¡Á¦¸ÄÕý
+ä»¥ä¸Šå°±æ˜¯AndroidåŠ¨ç”»å®žçŽ°çš„ä»£ç ï¼ˆKotlinï¼Œä¸æ¶‰åŠJavaï¼‰å®žçŽ°ï¼Œå¦‚æžœä½ æœ‰ä»»ä½•é—®é¢˜ï¼Œå¯ä»¥é€šè¿‡E-mailçš„å½¢å¼å‘Šè¯‰æˆ‘ï¼Œæˆ‘ä¸€å®šå°½åŠ›æ”¹æ­£
