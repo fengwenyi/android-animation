@@ -1,7 +1,11 @@
 # Android动画简单总结
+
 1、Android动画包括属性动画和传统动画（帧动画和补间动画）
+
 2、Android动画有两种实现方式：XML设置和Java（Kotlin）代码实现
+
 3、常见动画实现示例
+
 ### 〈一〉缩  放
 ```
 <scale
@@ -17,7 +21,7 @@
     />
 ```
 
-### 〈一〉透明度
+### 〈二〉透明度
 ```
 <alpha
     android:duration="5000"
@@ -26,7 +30,7 @@
     />
 ```
 
-### 〈一〉旋  转
+### 〈三〉旋  转
 ```
 <rotate
     android:duration="500"
@@ -38,7 +42,7 @@
     />
 ```
 
-### 〈一〉位  移
+### 〈四〉位  移
 ```
 <translate
     android:duration="10000"
@@ -131,4 +135,4 @@ val animationDrawable : AnimationDrawable = imgAnimation.drawable as AnimationDr
 animationDrawable.start()
 ```
 
-以上就是Android动画实现的代码（Kotlin，不涉及Java）实现，如果你有任何问题，可以通过E-mail的形式告诉我，我一定尽力改正
+以上就是Android动画实现的代码（Kotlin）实现，如果你有任何问题，可以通过E-mail的形式告诉我，我一定尽力改正
